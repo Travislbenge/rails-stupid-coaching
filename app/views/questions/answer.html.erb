@@ -1,0 +1,30 @@
+<h1>Stupid Coaching</h1>
+
+<div id = "you">
+  <%= @answer %>
+  <br>
+  <%= "-You" %>
+  <br>
+</div>
+<p></p>
+<div id = "coach">
+  <% if @answer == "I am going to work"  %>
+    <%= "Great!"%>
+    <br>
+    <%= "-Your coach" %>
+  <% elsif @answer[-1] == "?" %>
+    <%=  "Silly question, get dressed and go to work!"%>
+    <br>
+    <%= "-Your coach" %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+    <br>
+    <%= "-Your coach" %>
+  <% end  %>
+  <br>
+</div>
+<p> </p>
+<!-- <a href="ask.html.erb">Question</a> -->
+<div id = "link">
+  <%= link_to "Return to question", ask_path %>
+</div>
